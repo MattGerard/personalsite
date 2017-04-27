@@ -1,4 +1,5 @@
 import React from 'react';
+import hrImage from '../img/hr.png';
 
 export default class App extends React.Component {
   render() {
@@ -11,7 +12,7 @@ export default class App extends React.Component {
             <div className="top-border" />
 
             <div className="header-content">
-
+              <div className="logo" />
               <div className="Details">
                 <ul className="ContactDetail">
                   <li>
@@ -25,15 +26,12 @@ export default class App extends React.Component {
                     </a>
                   </li>
                   <li>
-                    <a href="http://BITBUCKET.ORG/MGERARD" target="_blank">
-                      BITBUCKET.ORG/MGERARD <i className="detail-icon bitbucket" />
+                    <a href="https://github.com/MattGerard" target="_blank">
+                      GITHUB.COM/MATTGERARD <i className="detail-icon bitbucket" />
                     </a>
                   </li>
                 </ul>
               </div>
-
-              <div className="logo" />
-
             </div>
 
             <div className="bottom-border" />
@@ -47,10 +45,16 @@ export default class App extends React.Component {
               <a className="title"><h1>About</h1></a>
               <span id="about" />
               <p className="lead">
-                I'm Matt Gerard - a web developer & designer based out of Seattle, WA. I provide custom, high quality web services to a wide range of clients. I've been fortunate enough to see work from large corporate ventures, Artists, and small local businesses. Just about everyone these days has a web presence, in one way or another. Whether they can say it's benefited them or not, is another story. With my help, we'll get your project out there for people to talk about.
+                I'm a web developer, designer, DIYer based out of Seattle, WA. I provide custom, high quality web services to a wide range of clients. I've been fortunate enough to see work from large corporate ventures, Artists, and small local businesses.
               </p>
 
-              <div class="crookedSpace"><img src="img/hr.png" alt="crookedSpacer" /></div>
+              <div className="crookedSpace"><img src={hrImage} alt="crookedSpacer" /></div>
+
+              <a className="title"><h1>Contact</h1></a>
+              <span id="about" />
+              <p className="lead">
+                Drop me a line: <a href="emailto: matt@matthewgerard.com">matt@matthewgerard.com</a>
+              </p>
 
             </div>
             <div id="push" />
