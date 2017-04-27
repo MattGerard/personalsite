@@ -53,7 +53,7 @@ export default class App extends React.Component {
               <a className="title"><h1>Contact</h1></a>
               <span id="about" />
               <p className="lead">
-                Drop me a line: <a href="emailto: matt@matthewgerard.com">matt@matthewgerard.com</a>
+                Drop me a line: <a href="mailto:matt@matthewgerard.com">matt@matthewgerard.com</a>
               </p>
 
             </div>
