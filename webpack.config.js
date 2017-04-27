@@ -24,15 +24,19 @@ module.exports = function(env) {
         new webpack.optimize.UglifyJsPlugin(),
         new HTMLWebpackPlugin({
           template: 'index-template.html',
+          favicon: './src/img/favicon.ico',
         }),
         extractCSS,
       ]
-    : [new webpack.HotModuleReplacementPlugin(), extractCSS];
+    : [
+        new webpack.HotModuleReplacementPlugin(),
+        extractCSS,
+        new HTMLWebpackPlugin({
+          favicon: './src/img/favicon.ico',
+        }),
+      ];
 
   return {
-    externals: {
-      jquery: 'jQuery', //jquery is a vendor file, avail. as global const.
-    },
     devtool: 'source-map',
     entry: entry,
     plugins: plugins,
@@ -44,7 +48,7 @@ module.exports = function(env) {
           exclude: '/node_modules/',
         },
         {
-          test: /\.(png|jpg|gif)$/,
+          test: /\.(png|jpg|gif|ico)$/,
           loaders: ['url-loader?limit=10000&name=img/[hash:12].[ext]'],
           exclude: '/node_modules/',
         },
@@ -79,7 +83,7 @@ module.exports = function(env) {
         },
         {
           test: /\.(eot|svg|ttf|woff|woff2)$/,
-          loaders: ['file-loader?name=public/fonts/[name].[ext]'],
+          loaders: ['file-loader?name=fonts/[name].[ext]'],
         },
       ],
     },
