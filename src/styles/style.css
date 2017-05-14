@@ -36,15 +36,19 @@ body{
     width: 100%;
     display: flex;
 }
-
-.logo{
-	background:url('../img/logo.png');
-    width: 495px;
-    height: 195px;
+.logo-wrap{
+    flex:3;
+    .logo{
+    flex: 3;
     position: relative;
     margin-left: 15px;
     background-repeat: no-repeat;
-    flex: 1;
+    max-width: 495px;
+    .logo-img{
+        width: 100%;
+    }
+}
+
 }
 
 .crookedSpace img{
@@ -156,6 +160,30 @@ html, body {
 
 .lead{
 	text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+}
+
+
+/* query */
+@media (max-width: 650px) {
+  .header-content {
+    display: block;
+    .logo-wrap{
+        text-align: center;
+        .logo{
+            display: inline-block;
+        }
+    }
+  }
+  .ContactDetail{
+      text-align: center;
+      display: inline-block;
+      margin-bottom: 20px;
+  }
+    .Details {
+        font-size: 24px;
+        text-align: center;
+    }
+
 }
 
 /* Components */
